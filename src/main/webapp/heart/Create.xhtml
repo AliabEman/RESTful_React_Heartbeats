@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"><h:outputText value = "#{bundle['by']} " />
 <f:view locale="#{heartController.locale}">
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
@@ -30,11 +30,6 @@
                 <br />
                 <br />
                 <h:link outcome="/index" value="#{bundle.CreateHeartIndexLink}"/>
-                <h:selectOneMenu value="#{heartController.language}" onchange="submit()">
-                <f:selectItem itemValue="en" itemLabel="English" />
-                <f:selectItem itemValue="nl" itemLabel="Nederlands" />
-                <f:selectItem itemValue="es" itemLabel="Español" />
-                </h:selectOneMenu>
                 </h:form>
         </ui:define>
     </ui:composition>
